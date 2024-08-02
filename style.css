@@ -11,12 +11,30 @@ body{
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
+a{
+    text-decoration: none;
+}
+.container1{
+    display: grid;
+    grid-template-rows: 5rem 80vh 1fr;
+    grid-template-areas: "header"
+                        " bodycontainer"
+                        "footer";
+}
 .header{
     display: flex;
+    grid-area: header;
     justify-content: end;
-    height: 10%;
+    height: 10vh;
     align-items: center;
-    gap: 2rem; margin-right: 2rem;
+    gap: 2rem; 
+    margin-right: 2rem;
+}
+.hero-icon{
+    grid-area: heroicon;
+}
+.hero-txt{
+    grid-area:herotxt ;
 }
 .hometxt{
     
@@ -24,44 +42,34 @@ body{
 }
 .bodycontainer{
     display: flex;
+    grid-area: bodycontainer;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 80vh;
 }
-a{
+.headeranchors{
     padding: 1em 2em;
-    text-decoration: none;
 }
-
-
-button{
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-
-}
-img{
-    object-fit: contain;
-}
-
-.footer{
-    display: flex;
-    margin-bottom: 100px;
-    gap: 3rem;
-    justify-content: end;
-    height: 10%;
-    margin-right: 2rem;
-
-}
-.headphoneimgdiv{
-    width: 70%;
-}
-.headphoneicon{
-    
-    place-self: start;
+.headphoneicon{    
+    margin-right: 65%;
 }
 .hero-text{
     font-family: "Sacramento", cursive;
     font-size: 20rem;
     font-weight: 300;
+}
+.footer{
+    display: flex;
+    grid-area: footer;
+    margin-bottom: 100px;
+    justify-content: end;
+    height: 10vh;
+    margin-right: 2rem;
+}
+.footeranchors{
+    padding: 0.5rem ;
+}
+.footerimgs{
+    width: 2rem;
+    height: 2rem;
 }
